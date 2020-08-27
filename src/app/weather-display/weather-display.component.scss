@@ -1,0 +1,21 @@
+.display-container {
+    margin-top: 100px;
+    background-color: #cecece8a;
+    .card {
+        background-color: transparent;
+        border-color: transparent;
+        color: #fff;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 200px;
+        cursor: pointer;
+        .weather-icon {
+            width: 35px;
+        }
+    }
+    .card.active {
+        background-color: #d0d0d073;
+    }
+    
+}
