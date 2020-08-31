@@ -1,6 +1,7 @@
 .display-container {
     margin-top: 70px;
-    background-color: #cecece8a;
+    background-color: #efefef36;
+    border-radius: 10px;
     .card {
         background-color: transparent;
         border-color: transparent;
@@ -15,7 +16,7 @@
         }
     }
     .card.active {
-        background-color: #d0d0d073;
+        background-color: #a4afb557;
     }
     
 }

@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { WeatherDisplayComponent } from './weather-display/weather-display.component';
+import { WeatherComponent } from './weather/weather.component';
 
 
 const routes: Routes = [
-  {path: '', component: WeatherDisplayComponent}
+  {path: '', component: WeatherComponent}
 ];
 
 @NgModule({

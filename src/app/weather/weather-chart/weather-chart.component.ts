@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as CanvasJS from '../../shared/canvasjs.min.js';
+import * as CanvasJS from '../../../shared/canvasjs.min.js';
 
 @Component({
   selector: 'app-weather-chart',
@@ -19,7 +19,7 @@ export class WeatherChartComponent implements OnInit {
         interval: 1, 
         intervalType: "hour",        
         valueFormatString: "hh TT", 
-        labelAngle: -20,
+        labelAngle: 0
       },
       axisY:{
         gridColor: "none",
@@ -30,6 +30,7 @@ export class WeatherChartComponent implements OnInit {
         indexLabel: "{y}°",
         xValueFormatString: "hh",
         toolTipContent: "{x} AM </br> <strong>Temperature: </strong> {y} °C",
+        color: "#a4afb557",
         dataPoints: [
           { x: new Date(Date.UTC (2012, parseInt('01', 8), 1, 1,0) ), y: 26},
           { x: new Date(Date.UTC (2012, parseInt('01', 8), 1, 2,0) ), y: 27 },

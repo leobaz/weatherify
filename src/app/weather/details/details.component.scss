@@ -1,0 +1,25 @@
+.details-section {
+    margin-top: 50px;
+    color: #ffffff;
+    background-color: #efefef36;
+    padding-top: 10px;
+    border-radius: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    .right-section {
+        display: flex;
+        padding-top: 10px;
+        .right-details {
+            p {
+                margin-bottom: 0;
+            }
+            svg {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    
+    
+}
