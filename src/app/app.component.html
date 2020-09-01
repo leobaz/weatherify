@@ -1,6 +1,31 @@
 <div class="bg-img">
-  <app-header></app-header>
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
+  <ng-sidebar-container>
+    <!-- A sidebar -->
+    <ng-sidebar 
+        [(opened)]="_opened"
+        [mode]="'push'"
+        [closeOnClickOutside]="true"
+        [animate]="true"
+        [ariaLabel]="'Weatherify Sidebar'"
+    >
+      <div class="sidebar-header">
+        <h3 class="sidebar-title">Weather<span>ify</span></h3>
+      </div>
+      <div class="sidebar-content">
+        <h5>Cities</h5>
+        <p>Pristina, Kosovo</p>
+        <button class="btn btn-primary">Add City</button>
+      </div>
+      
+    </ng-sidebar>
+
+    <!-- Page content -->
+    <div ng-sidebar-content>
+      <!-- <button (click)="_toggleSidebar()">Toggle sidebar</button> -->
+        <app-header></app-header>
+        <div class="container">
+          <router-outlet></router-outlet>
+        </div>
+    </div>
+  </ng-sidebar-container>
 </div>

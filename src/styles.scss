@@ -2,3 +2,23 @@
 html, body {
     font-family: 'Roboto', sans-serif;
 }
+
+.ng-sidebar {
+    background-color: #ffffff;
+    .sidebar {
+        &-header {
+            background-color: #78acdc;
+        }
+        &-title {
+            padding: 20px;
+            color: #ffffff;
+            text-transform: uppercase;
+            span {
+                color: red;
+            }
+        }
+        &-content {
+            padding: 20px;
+        }
+    }
+}
