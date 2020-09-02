@@ -2,19 +2,22 @@
     <a (click)="toggleSidebar()"><img src="assets/images/iconfinder_menu_5925630.png" class="menu-icon"></a>
 
     <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-            <img src="assets/images/weather/clear-icon.png" class="weather-icon">
+        <li class="nav-item" *ngIf="currentCity?.weather.icon !== '04d' && currentCity?.weather.icon !== '04n'">
+            <img [src]="'assets/images/weather/' + currentCity?.weather.icon + '.png'" class="weather-icon">
+        </li>
+        <li class="nav-item" *ngIf="currentCity?.weather.icon === '04d' || currentCity?.weather.icon === '04n'">
+            <img src="assets/images/weather/03d.png" class="weather-icon">
         </li>
         <li class="nav-item">
-          <span>28°c</span>
+          <span>{{ currentCity?.temp.current | number : '1.0-0' }}°c</span>
         </li>
         <li class="nav-item">
-            <span>Mostly Cloudy</span>
+            <span>{{ currentCity?.weather.main }}</span>
         </li>
     </ul>
     <ul class="navbar-nav my-2 my-lg-0">
         <li class="nav-item">
-            <span>Pristina, Kosovo</span>
+            <span>{{ currentCity?.name }}</span>
         </li>
         <li class="nav-item">
             <span><i class="fa fa-search" aria-hidden="true"></i></span>

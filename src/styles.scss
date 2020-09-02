@@ -4,10 +4,11 @@ html, body {
 }
 
 .ng-sidebar {
-    background-color: #ffffff;
+    background-color: #78acdc;
+    color: #ffffff;
     .sidebar {
         &-header {
-            background-color: #78acdc;
+            // background-color: #78acdc;
         }
         &-title {
             padding: 20px;
@@ -19,6 +20,12 @@ html, body {
         }
         &-content {
             padding: 20px;
+            .add-btn {
+                border-radius: 10px;
+                background-color: #ffffff;
+                border-color: #ffffff;
+                color: #78acdc;
+            }
         }
     }
 }

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidebarModule } from 'ng-sidebar';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -25,7 +26,8 @@ import { DetailsComponent } from './weather/details/details.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SidebarModule.forRoot()
+    SidebarModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
