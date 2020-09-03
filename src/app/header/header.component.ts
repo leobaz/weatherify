@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   constructor(private sidebarService: SidebarService, private weatherService: WeatherService) { }
 
   ngOnInit(): void {
-    this.weatherService.getCityWeather('Amsterdam').subscribe((data) => {
+    this.weatherService.getCityWeather('Pristina').subscribe((data) => {
       console.log(data);
       this.currentCity = {
         name: `${data['name']}, ${data['sys']['country']}`,
