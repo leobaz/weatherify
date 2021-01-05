@@ -1,12 +1,12 @@
 <div class="display-container">
-    <div class="row">
-        <div class="col-md-3" *ngFor="let day of weatherDays">
+    <div class="row carousel">
+        <div class="col-md-3 carousel-cell" *ngFor="let day of weatherDays">
             <div class="card active">
                 <div class="card-body">
-                    <p class="date">{{ day.date | date: 'E dd' }}</p>
-                    <img src="assets/images/weather/clouds-icon.png" class="weather-icon">
-                    <p>33° / 27°</p>
-                    <p>Mostly Cloudly</p>
+                    <p class="date">{{ day.date | date: 'E dd HH:mm' }}</p>
+                    <img src="assets/images/weather/{{day.weather.icon}}.png" class="weather-icon">
+                    <p>{{ day.temp.max | number : '1.0-0' }}° / {{ day.temp.min | number : '1.0-0' }}°</p>
+                    <p>{{ day.weather.description | titlecase }}</p>
                 </div>
             </div>
         </div>

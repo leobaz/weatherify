@@ -30,7 +30,7 @@ export class WeatherChartComponent implements OnInit {
         indexLabel: "{y}°",
         xValueFormatString: "hh",
         toolTipContent: "{x} AM </br> <strong>Temperature: </strong> {y} °C",
-        color: "#a4afb557",
+        color: "#ffffff",
         dataPoints: [
           { x: new Date(Date.UTC (2012, parseInt('01', 8), 1, 1,0) ), y: 26},
           { x: new Date(Date.UTC (2012, parseInt('01', 8), 1, 2,0) ), y: 27 },
