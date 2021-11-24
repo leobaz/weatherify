@@ -1,17 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SidebarModule } from 'ng-sidebar';
-import { HttpClientModule } from '@angular/common/http';
-
-import { AppRoutingModule } from './app-routing.module';
-
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { WeatherDisplayComponent } from './weather/weather-display/weather-display.component';
-import { WeatherChartComponent } from './weather/weather-chart/weather-chart.component';
-import { WeatherComponent } from './weather/weather.component';
-import { DetailsComponent } from './weather/details/details.component';
+import { HttpClientModule } from "@angular/common/http";
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { SidebarModule } from "ng-sidebar";
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { HeaderComponent } from "./components/header/header.component";
+import { DetailsComponent } from "./components/weather/details/details.component";
+import { WeatherChartComponent } from "./components/weather/weather-chart/weather-chart.component";
+import { WeatherDisplayComponent } from "./components/weather/weather-display/weather-display.component";
+import { WeatherComponent } from "./components/weather/weather.component";
 
 @NgModule({
   declarations: [
@@ -20,16 +18,16 @@ import { DetailsComponent } from './weather/details/details.component';
     WeatherDisplayComponent,
     WeatherChartComponent,
     WeatherComponent,
-    DetailsComponent
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SidebarModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
