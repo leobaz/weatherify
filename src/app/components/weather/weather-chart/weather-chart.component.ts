@@ -1,13 +1,16 @@
 import { Component, OnInit } from "@angular/core";
+import { Store } from "@ngrx/store";
+import { AppState } from "src/app/store/app.state.js";
 import * as CanvasJS from "../../../shared/canvasjs.min.js";
-
 @Component({
   selector: "app-weather-chart",
   templateUrl: "./weather-chart.component.html",
   styleUrls: ["./weather-chart.component.scss"],
 })
 export class WeatherChartComponent implements OnInit {
-  constructor() {}
+  constructor(private store: Store<AppState>) {
+    this.getDailyForecastFromAppStore();
+  }
 
   ngOnInit(): void {
     let chart = new CanvasJS.Chart("chartContainer", {
@@ -44,5 +47,9 @@ export class WeatherChartComponent implements OnInit {
     });
 
     chart.render();
+  }
+
+  getDailyForecastFromAppStore(): void {
+    this.store.select("dailyForecast").subscribe((dailyForecast) => {});
   }
 }

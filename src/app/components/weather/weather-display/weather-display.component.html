@@ -1,7 +1,7 @@
 <div class="display-container">
     <div class="row carousel">
         <div class="col-md-3 carousel-cell" *ngFor="let day of weatherDays">
-            <div class="card" (click)="active = day.date" [ngClass]="{'active': active === day.date}">
+            <div class="card" (click)="active = day.date; updateDailyForecastFromAppStore(day)" [ngClass]="{'active': active === day.date}">
                 <div class="card-body">
                     <p class="date">{{ day.date | date: 'EEEE d' }}</p>
                     <img src="assets/images/weather/{{day.weather.icon}}.png" class="weather-icon">

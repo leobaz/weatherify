@@ -19,7 +19,7 @@ export class WeatherService {
       .set("lang", "en-US")
       .set("units", "metric");
     return this.httpClient.get(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=current,minutely,hourly`,
+      `https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=current,minutely`,
       { params: params }
     );
   }

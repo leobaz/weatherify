@@ -10,6 +10,7 @@ import { DetailsComponent } from "./components/weather/details/details.component
 import { WeatherChartComponent } from "./components/weather/weather-chart/weather-chart.component";
 import { WeatherDisplayComponent } from "./components/weather/weather-display/weather-display.component";
 import { WeatherComponent } from "./components/weather/weather.component";
+import { AppStoreModule } from "./store/store.module";
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { WeatherComponent } from "./components/weather/weather.component";
     BrowserAnimationsModule,
     SidebarModule.forRoot(),
     HttpClientModule,
+    AppStoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

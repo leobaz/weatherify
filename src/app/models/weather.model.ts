@@ -15,4 +15,10 @@ export class Weather {
     icon: string;
   };
   wind?: number;
+  hourly?: Hourly[];
+}
+
+export class Hourly {
+  date: number;
+  temp: number;
 }
